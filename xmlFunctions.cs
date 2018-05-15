@@ -16,8 +16,6 @@ namespace Rusal_test_task
             {
                 try
                 {
-                    button2.Enabled = true;
-                    errorProvider1.SetError(button1, "");
                     string[] keys = { "Потребление Ввод #1", "Потребление Ввод #2" };
                     XmlDocument xDoc = new XmlDocument();
                     xDoc.Load(OPF.OpenFile());
@@ -30,7 +28,11 @@ namespace Rusal_test_task
                                       (xChildNode.Attributes.GetNamedItem("name").Value.Contains(ConfigurationManager.AppSettings[keys[1]]) == true)))
                                     foreach (XmlNode xMeasuringchannel in xChildNode)
                                         foreach (XmlNode xPeriod in xMeasuringchannel)
+                                        {
                                             consumptionCurrent += Convert.ToDouble(xPeriod.FirstChild.InnerText.ToString());
+                                            button2.Enabled = true;
+                                            errorProvider1.SetError(button1, "");
+                                        }
                 }
                 catch
                 {
