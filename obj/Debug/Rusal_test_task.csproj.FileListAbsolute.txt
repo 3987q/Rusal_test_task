@@ -1,0 +1,10 @@
+C:\Users\АЛИНА\source\repos\Rusal_test_task\Rusal_test_task\obj\Debug\Rusal_test_task.csprojResolveAssemblyReference.cache
+C:\Users\АЛИНА\source\repos\Rusal_test_task\Rusal_test_task\obj\Debug\Rusal_test_task.Form1.resources
+C:\Users\АЛИНА\source\repos\Rusal_test_task\Rusal_test_task\obj\Debug\Rusal_test_task.Properties.Resources.resources
+C:\Users\АЛИНА\source\repos\Rusal_test_task\Rusal_test_task\obj\Debug\Rusal_test_task.csproj.GenerateResource.Cache
+C:\Users\АЛИНА\source\repos\Rusal_test_task\Rusal_test_task\obj\Debug\Rusal_test_task.csproj.CoreCompileInputs.cache
+C:\Users\АЛИНА\source\repos\Rusal_test_task\Rusal_test_task\bin\Debug\Rusal_test_task.exe.config
+C:\Users\АЛИНА\source\repos\Rusal_test_task\Rusal_test_task\bin\Debug\Rusal_test_task.exe
+C:\Users\АЛИНА\source\repos\Rusal_test_task\Rusal_test_task\bin\Debug\Rusal_test_task.pdb
+C:\Users\АЛИНА\source\repos\Rusal_test_task\Rusal_test_task\obj\Debug\Rusal_test_task.exe
+C:\Users\АЛИНА\source\repos\Rusal_test_task\Rusal_test_task\obj\Debug\Rusal_test_task.pdb
