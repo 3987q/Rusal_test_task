@@ -14,8 +14,6 @@ namespace Rusal_test_task
             OPF.Filter = "Файлы xml|*.xml";
             if (OPF.ShowDialog() == DialogResult.OK)
             {
-                try
-                {
                     string[] keys = { "Потребление Ввод #1", "Потребление Ввод #2" };
                     XmlDocument xDoc = new XmlDocument();
                     xDoc.Load(OPF.OpenFile());
@@ -29,17 +27,19 @@ namespace Rusal_test_task
                                     foreach (XmlNode xMeasuringchannel in xChildNode)
                                         foreach (XmlNode xPeriod in xMeasuringchannel)
                                         {
-                                            consumptionCurrent += Convert.ToDouble(xPeriod.FirstChild.InnerText.ToString());
-                                            button2.Enabled = true;
-                                            errorProvider1.SetError(button1, "");
+                                            try
+                                            {
+                                                consumptionCurrent += Convert.ToDouble(xPeriod.FirstChild.InnerText.ToString());
+                                                button2.Enabled = true;
+                                                errorProvider1.SetError(button1, "");
+                                            }
+                                            catch
+                                            {
+                                                //Если файл с иной разметкой, то произвести рассчет нельзя
+                                                button2.Enabled = false;
+                                                errorProvider1.SetError(button1, "Некорректный .xml файл");
+                                            }
                                         }
-                }
-                catch
-                {
-                    //Если файл с иной разметкой, то произвести рассчет нельзя
-                    button2.Enabled = false;
-                    errorProvider1.SetError(button1, "Некорректный .xml файл");
-                }
             }
         }
     }
