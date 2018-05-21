@@ -6,6 +6,7 @@ namespace Rusal_test_task
 {
     public partial class Form1 : Form
     {
+        bool XmlCorrect = false;
         double consumptionCurrent = 0, serialTotalConsumption = 0;
         public Form1()
         {
@@ -26,9 +27,10 @@ namespace Rusal_test_task
 
         private void button2_Click(object sender, EventArgs e)
         {
+            textArea.Clear();
             textArea.Text = getKPD().ToString() + "%";
             //На случай повторных рассчетов
-            consumptionCurrent = 0; serialTotalConsumption = 0; button2.Enabled = false;
+            consumptionCurrent = 0; serialTotalConsumption = 0; button2.Enabled = false; XmlCorrect = false;
         }
 
     }

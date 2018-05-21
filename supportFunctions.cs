@@ -38,8 +38,8 @@ namespace Rusal_test_task
         double getSerialTotalConsumption()
         {
             for (int i = 1; i < 25; i++)
-                    serialTotalConsumption += Convert.ToDouble(Controls["serialCurrent" + i.ToString()].Text) *
-                        (Convert.ToDouble(Controls["shellVoltage" + i.ToString()].Text) - getConfigData());
+                serialTotalConsumption += Convert.ToDouble(Controls["serialCurrent" + i.ToString()].Text) *
+                    (Convert.ToDouble(Controls["shellVoltage" + i.ToString()].Text) - getConfigData());
             return serialTotalConsumption;
         }
 
