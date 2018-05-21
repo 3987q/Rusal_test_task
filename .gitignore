@@ -1,0 +1,6 @@
+.gitattributes
+Handler.cs
+/Properties
+/bin
+/obj
+configFuntions.cs

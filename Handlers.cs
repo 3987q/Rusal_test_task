@@ -12,7 +12,7 @@ namespace Rusal_test_task
         {
             if (!validateText((sender as TextBox).Text.ToString()))
             {
-                errorProvider1.SetError((sender as TextBox), "Допустимы заполненные поля, со значениями <100000");
+                errorProvider1.SetError((sender as TextBox), "Допустимы значения в диапозоне [0..100000]");
                 (sender as TextBox).BackColor = Color.Red;
             }
             else
@@ -26,16 +26,18 @@ namespace Rusal_test_task
         private void textBoxTextChanged(object sender, EventArgs e)
         {
             textBoxValidating(sender, e as CancelEventArgs);
-            if (HasError())
-                button2.Enabled = false;
-            else button2.Enabled = true;
+            if ((HasError() == false) & (XmlCorrect == true))
+                button2.Enabled = true;
+            else button2.Enabled = false;
+            bool result = ((HasError() == false) & (XmlCorrect == true));
+            textArea.Text = (HasError()).ToString() + " " + XmlCorrect.ToString() + " result =  " + result.ToString();
         }
 
         void handlerInit()
         {
             foreach (Control t in Controls)
                 //В исключении будет текстовый %
-                if ( (t is TextBox) && (!t.Name.Contains("textArea")) )
+                if ((t is TextBox) && (!t.Name.Contains("textArea")))
                 {
                     //Дефолтное значение
                     t.Text = "0";
