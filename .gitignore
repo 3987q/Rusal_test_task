@@ -1,7 +1,0 @@
-.gitattributes
-.gitingore
-Handler.cs
-/Properties
-/bin
-/obj
-configFuntions.cs
