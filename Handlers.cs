@@ -29,8 +29,6 @@ namespace Rusal_test_task
             if ((HasError() == false) & (XmlCorrect == true))
                 button2.Enabled = true;
             else button2.Enabled = false;
-            bool result = ((HasError() == false) & (XmlCorrect == true));
-            textArea.Text = (HasError()).ToString() + " " + XmlCorrect.ToString() + " result =  " + result.ToString();
         }
 
         void handlerInit()
